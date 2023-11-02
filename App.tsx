@@ -1,10 +1,16 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {Text, View} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 
-function App() {
+function Content() {
   return (
-    <GestureHandlerRootView style={{flex: 1}}>
+    <View
+      style={{
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1,
+        backgroundColor: '#cccccc',
+      }}>
       <Text>text 1</Text>
       <Text>text 2</Text>
       <Text>text 3</Text>
@@ -20,6 +26,14 @@ function App() {
       <Text>text 13</Text>
       <Text>text 14</Text>
       <Text>text 15</Text>
+    </View>
+  );
+}
+
+function App() {
+  return (
+    <GestureHandlerRootView style={{flex: 1}}>
+      <Content />
     </GestureHandlerRootView>
   );
 }
